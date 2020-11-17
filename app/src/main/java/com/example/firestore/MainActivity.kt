@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
+import org.koin.android.ext.android.inject
 
 //https://medium.com/firebase-developers/android-mvvm-firestore-37c3a8d65404
 
@@ -12,7 +13,7 @@ import androidx.lifecycle.Observer
 // THIS IS COOL https://stackoverflow.com/questions/59874102/how-to-return-livedata-from-repository
 
 class MainActivity : AppCompatActivity() {
-    private var vm : PageViewModel = PageViewModel()
+     val vm : PageViewModel by inject()
 
     override fun onStart() {
         super.onStart()

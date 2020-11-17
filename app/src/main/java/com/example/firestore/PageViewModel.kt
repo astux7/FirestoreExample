@@ -7,14 +7,10 @@ import androidx.lifecycle.*
 
 //https://www.ericdecanini.com/2020/01/27/android-chat-messenger-with-firestore-mvvm-edition-with-dagger-livedata-and-coroutines/
 
-class PageViewModel: ViewModel() {
-    private val postsValues = MutableLiveData<List<Page>>()
-    private val repo: FBRepository = FBRepository()
-
+class PageViewModel(private val repo: FBRepository): ViewModel() {
 
     fun onPostsValuesChange(): LiveData<List<Page>> {
-        repo.onPostsValuesChange()
-        return postsValues
+        return  repo.onPostsValuesChange()
     }
 
     fun stopListeningForPostChanges() = repo.stopListeningForPostChanges()

@@ -11,11 +11,11 @@ import com.google.firebase.firestore.QuerySnapshot
 //https://stackoverflow.com/questions/54466799/retrieving-data-from-firestore-using-mvvm-architecture
 //https://www.ericdecanini.com/2020/01/27/android-chat-messenger-with-firestore-mvvm-edition-with-dagger-livedata-and-coroutines/
 
-class FBRepository {
+class FBRepository(val database: FirebaseFirestore) {
 
     private  val PAGE_COLLECTION = "test"
 
-        private val database = FirebaseFirestore.getInstance()
+     //   private val database = FirebaseFirestore.getInstance()
         private val postsValues = MutableLiveData<List<Page>>()
         private lateinit var postsRegistration: ListenerRegistration
 
