@@ -8,12 +8,10 @@ import com.google.firebase.firestore.ListenerRegistration
 import com.google.firebase.firestore.QuerySnapshot
 
 //https://en.proft.me/2019/10/20/firebase-cloud-firestore-and-livedata/
-
 //https://stackoverflow.com/questions/54466799/retrieving-data-from-firestore-using-mvvm-architecture
-
 //https://www.ericdecanini.com/2020/01/27/android-chat-messenger-with-firestore-mvvm-edition-with-dagger-livedata-and-coroutines/
 
-class FBRepository() {
+class FBRepository {
 
     private  val PAGE_COLLECTION = "test"
 
